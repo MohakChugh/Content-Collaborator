@@ -1,0 +1,12 @@
+<div class="article-clean">
+    <div class="container">
+        <div class="card border-secondary" *ngFor="let blog of blogs">
+            <div class="card-body">
+                <p class="card-text" [innerHTML]="blog.Content">Text</p>
+                <br><br><br>
+                <p class="text-center"><span class="date">{{blog.time}}</span></p>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
