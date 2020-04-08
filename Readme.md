@@ -1,0 +1,46 @@
+# Content Collaborator
+This is a realtime content editor which allows a group of users to
+Collaborate on documents or webpage contents, see changes in realtime,
+make changes as they go and upload the content in no time.
+
+## To start the project
+Run mongodb locally using the following command
+
+```bash
+sudo docker run -d -p 27017:27017 -v "${pwd}"/data:/data/db mongo
+```
+
+#### Then to start the backend
+- cd backend
+- npm i
+- npm start
+
+#### To start the frontend
+
+Make sure you have angular cli installed globally in your system.
+To install angular cli run the following command.
+
+```bash
+    $ sudo npm i -g @angular/cli@8.3.25
+```
+
+- cd frontend
+- ng serve
+
+If you want to run the frontend for the production,
+perform the following steps.
+- Install lite-server globally
+```bash
+    $ sudo npm i -g lite-server
+```
+- Build the angular project
+```bash
+    # From the root of the project, run:
+    $ cd ./frontend && ng build --prod
+```
+- Change directory into the root dist folder and run the index.html file using lite-server
+
+```bash
+    $ cd ./frontend/dist/content-pusher
+    $ lite-server index.html
+```
