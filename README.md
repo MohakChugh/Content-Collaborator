@@ -62,3 +62,9 @@ You can see the html content on
 The blogs page will look something like this:
 ![The Blog Page](https://raw.githubusercontent.com/MohakChugh/Content-Collaborator/master/ui/assets/img/blog.png)
 
+#### How real time Collaboration works on this
+When all the people who are logged in and are on the page
+`localhost:4200/editor`, they are instantly connected to the server
+and can make changes to the document as they proceed.
+
+![Real Time Collaboration](https://raw.githubusercontent.com/MohakChugh/Content-Collaborator/master/ui/assets/img/text-editor.gif)
