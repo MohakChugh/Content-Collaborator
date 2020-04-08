@@ -44,3 +44,21 @@ perform the following steps.
     $ cd ./frontend/dist/content-pusher
     $ lite-server index.html
 ```
+
+## Screenshots of the project
+
+After the initial login/registration
+You will see the editor. All the people 
+connected to the server who are logged in can see the editor,
+make changes in the document, see the changes in realtime
+and then, can push the html created from the editor into the databse.
+
+![The editor](https://raw.githubusercontent.com/MohakChugh/Content-Collaborator/master/ui/assets/img/editor.png)
+
+On clicking the button down in the right corner,
+You can see the html content on
+`localhost:4200/blogs`
+
+The blogs page will look something like this:
+![The Blog Page](https://raw.githubusercontent.com/MohakChugh/Content-Collaborator/master/ui/assets/img/blog.png)
+
