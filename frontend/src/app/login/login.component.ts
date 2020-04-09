@@ -26,11 +26,15 @@ export class LoginComponent implements OnInit {
       password: this.password
     })
       .then(response => {
+        if (response.data.error === false && response.data.success === true) {
+          this.isLoggedIn = true;
+          this.token = response.data.token;
+          localStorage.setItem('token', this.token);
+          this.router.navigateByUrl('/editor');
+        } else {
+          alert('Incorrect Password');
+        }
         console.log(response);
-        this.isLoggedIn = true;
-        this.token = response.data.token;
-        localStorage.setItem('token', this.token);
-        this.router.navigateByUrl('/editor');
       })
       .catch(err => {
         console.log(err);

@@ -6,8 +6,8 @@ const login = async (req, res) => {
         let result = await authentication.loginUser(email, password)
         if (result === false) {
             res.json({
-                error: false,
-                success: true,
+                error: true,
+                success: false,
                 message: "The user is not registered! Please register and then try signing in!"
             })
         } else {
@@ -54,6 +54,8 @@ const register = async (req, res) => {
 const validateToken = async (req, res) => {
     try {
         let { token } = req.body
+        token = token.split(" ")[1];
+        console.log(token);
         let result = await authentication.validateToken(token)
         res.send(result);
     } catch (err) {
