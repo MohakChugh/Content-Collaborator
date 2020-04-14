@@ -14,7 +14,6 @@ export class AuthGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     // if logged in
-    console.log('Inside Auth Guard')
     this.token = localStorage.getItem('token');
     console.log(this.token);
 

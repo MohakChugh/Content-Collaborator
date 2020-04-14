@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "pm2 start ./bin/www && pm2 start socket.js",
+    "start": "pm2 start ./bin/www && pm2 start socket.js && cd ../frontend && ng serve",
     "stop": "pm2 stop ./bin/www && pm2 stop socket.js"
   },
   "dependencies": {
