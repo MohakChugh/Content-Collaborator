@@ -52,10 +52,12 @@ const register = async (req, res) => {
 }
 
 const validateToken = async (req, res) => {
+    // console.log(req.body);
     try {
         let { token } = req.body
+        // console.log(token);
         token = token.split(" ")[1];
-        console.log(token);
+        // console.log(token);
         let result = await authentication.validateToken(token)
         res.send(result);
     } catch (err) {

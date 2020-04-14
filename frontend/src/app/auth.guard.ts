@@ -9,27 +9,19 @@ import { HttpClient } from '@angular/common/http';
 export class AuthGuard implements CanActivate {
   token: any;
   response: any;
+  result: any;
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     // if logged in
+    console.log('Inside Auth Guard')
     this.token = localStorage.getItem('token');
+    console.log(this.token);
+
     if (!this.token) {
       return false;
     } else {
-      this.http.post('http://localhost:3000/validateToken', this.token)
-        .subscribe(res => {
-          this.response = res;
-          if (this.response.data.error === false && this.response.data.error === true) {
-            console.log(`Token is: ${this.token}`);
-            console.log(this.response);
-            return true;
-          } else {
-            this.router.navigateByUrl('/login');
-            console.log('token not validated');
-            return false;
-          }
-        });
+      return true;
     }
   }
 

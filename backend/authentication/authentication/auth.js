@@ -69,10 +69,7 @@ const validateToken = async (token) => {
     try {
         // Decode Jwt which contains userid
         let tokenDecoder = jwt.verify(token, config.secretKey)
-        // Check is userid Exists in database
-        // If true return true
-        // Else return False
-        return await mongoFunctions.checkIfUserExists(tokenDecoder.userid)
+        return tokenDecoder.userid;
     } catch (err) {
         console.log(err)
         return err
