@@ -7,7 +7,7 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
 import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', component: EditorComponent },
   { path: 'editor', component: EditorComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
