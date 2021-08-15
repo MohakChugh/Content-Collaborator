@@ -10,6 +10,7 @@ sudo: true
 
 before_script:
   - npm i -g @angular/cli
+  - cd frontend
 
 cache:
   yarn: true
