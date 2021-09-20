@@ -9,7 +9,7 @@ branches:
 sudo: true
 
 before_script:
-  - npm i -g @angular/cli@8.3.25
+  - npm i -g @angular/cli@8.3.26`
 
 cache:
   yarn: true
@@ -17,11 +17,13 @@ cache:
     - node_modules
 
 script:
-  - ng build --prod
+  - ng build --prod --base-href /content-pusher/
 
 deploy:
   provider: pages
+  skip-cleanup: true
   github-token: $GITHUB_TOKEN
+  keep-history: true
   local-dir: ./dist/content-pusher
   on:
     branch: master
