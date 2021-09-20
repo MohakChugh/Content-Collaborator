@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "16.8"
+  - "12.11"
 
 branches:
   only:
@@ -9,7 +9,7 @@ branches:
 sudo: true
 
 before_script:
-  - npm i -g @angular/cli
+  - npm i -g @angular/cli@8.3.25
 
 cache:
   yarn: true
